@@ -1,0 +1,8 @@
+# 忽略数据集文件夹
+data/
+datasets/
+# 忽略所有图片和压缩包
+*.jpg
+*.png
+*.zip
+*.tar
