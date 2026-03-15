@@ -3,7 +3,7 @@ import os
 
 # ==== 1. 配置信息 ====
 # 注意：我已经将 token 放入 HfApi 初始化中
-MY_TOKEN = "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"
+MY_TOKEN = ""
 REPO_ID = "StevieHui/iBEM_data" 
 # 建议推送具体的环境场文件夹，而不是整个 ibem_data 大目录，这样仓库结构更清晰
 LOCAL_FOLDER = r"D:\陈熠辉备份\大三上\寒假科研\ibem_data"
