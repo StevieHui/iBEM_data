@@ -63,10 +63,10 @@ for lap_id in all_laps:
     if lap_data.empty:
         continue
         
-    lap_clean = lap_data.groupby(['X', 'Y']).mean(numeric_only=True).reset_index()
+    lap_clean = lap_data.groupby(['x1', 'y1']).mean(numeric_only=True).reset_index()
     
     # 观测点坐标
-    xobs = lap_clean[['X', 'Y']].values
+    xobs = lap_clean[['x1', 'y1']].values
     
     # 执行各项参数插值
     field_results = {}

@@ -33,13 +33,6 @@ data_1_index=data_1.loc[:,'Humi'] # loc取列必须:,列名；取行则直接行
 
 data_1 = data_1.reset_index(drop=True)
 
-# 环境参数修正
-for i in range(0,len(data_1)):
-    data_1.loc[i,'Temp'] = data_1.loc[i,'Temp'] + 0.49
-    data_1.loc[i,'Humi'] = data_1.loc[i,'Humi'] - 1.15
-    data_1.loc[i,'Light'] = data_1.loc[i,'Light'] - 80
-    data_1.loc[i,'CO2'] = data_1.loc[i,'CO2'] - 369.34
-    data_1.loc[i,'PM2.5'] = data_1.loc[i,'PM2.5'] - 0.69
 
 
 ### 空间插值 ###
