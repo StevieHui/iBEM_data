@@ -1,8 +1,49 @@
-# 忽略数据集文件夹
-data/
-datasets/
-# 忽略所有图片和压缩包
+# ==========================================
+# IBEM_data .gitignore
+# ==========================================
+
+# --- 1. Ignore Image and Video Data (Privacy & Storage) ---
+# 屏蔽所有常见的图像和视频格式，防止误传巡检照片
 *.jpg
+*.jpeg
 *.png
-*.zip
-*.tar
+*.tiff
+*.tif
+*.bmp
+*.mp4
+*.avi
+*.mov
+
+# 如果你的图片存放在特定的 'images' 或 'photos' 文件夹下，可以强制屏蔽
+**/images/
+**/photos/
+**/visual_data/
+
+# --- 2. Keep Assets (README images) ---
+# 我们需要保留 assets 文件夹中的示例图片用于 README 展示
+!assets/*.png
+!assets/*.jpg
+!assets/*.jpeg
+
+# --- 3. Python / Development Junk ---
+# 屏蔽 Python 运行产生的缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# --- 4. OS and IDE Files ---
+# 屏蔽操作系统产生的临时文件
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- 5. Data Processing Temp Files ---
+# 如果处理过程中产生了临时缓存或大型日志，予以屏蔽
+*.log
+*.tmp
+.ipynb_checkpoints/
