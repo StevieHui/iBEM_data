@@ -4,6 +4,12 @@
 
 **IBEM_data** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
 
+<p align="center">
+  <img src="assets/ibembot_system.png" width="80%" alt="IBEMbot Robotic System" />
+  <br />
+  <em>Figure 1: Overview of the intelligent robotic system for indoor environment monitoring (IBEMbot).</em>
+</p>
+
 By utilizing mobile robotics, this dataset provides a unique "walk-through" perspective on indoor environments, bridging the gap between building science, mobile robotics, and occupant-centric research.
 
 ---
@@ -36,11 +42,23 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 * **Environmental Diagnosis & Expert Systems\*:** Identifying building performance issues (e.g., envelope insulation leaks or HVAC terminal malfunctions) through **Semantic Mapping** and thermal imaging analysis.
 * **Multimodal Forecasting:** Predicting future environmental states and field evolutions using temporal-spatial models like **LSTM, GNN, or Graph-based Gaussian Processes**.
 
+<p align="center">
+  <img src="assets/dahe_reconstruction.png" width="90%" alt="Dahe Field Reconstruction" />
+  <br />
+  <em>Figure 2: Multi-parameter environmental field reconstruction (Temperature, CO2, Humidity) based on mobile sensing: A Case Study of Dahecun Museum.</em>
+</p>
+
 ### 2. Autonomous Sensing & Decision Making
 
 * **Active Sampling & Path Planning\*:** Developing algorithms that allow robots to autonomously locate areas with high environmental gradients for prioritized sampling using **A*, Dijkstra, or Semantic Navigation**.
 * **Mobile-Stationary Collaborative Sensing\*:** Coordinating fixed sensors (high temporal resolution) and mobile robots (high spatial coverage) to capture comprehensive environmental features based on physical baseline tasks.
 * **Building Environment Question Answering (QA):** Leveraging **Vision-Language Models (VLMs)** and **LLMs** to interact with the dataset, enabling natural language queries regarding building operational status.
+
+<p align="center">
+  <img src="assets/thermal_comfort.png" width="70%" alt="Thermal Comfort Assessment" />
+  <br />
+  <em>Figure 3: Fusion of visual imagery and environmental fields for occupant detection, behavior analysis, and spatial-temporal thermal comfort (PMV/PPD) assessment.</em>
+</p>
 
 ### 3. Smart Building Operation & Interaction
 
