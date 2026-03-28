@@ -58,19 +58,40 @@ The repository follows a strict spatial-temporal organization. Data is partition
 
 ```text
 IBEM_data/
-├── assets/                  # High-resolution field maps and comfort analysis samples
-├── codes/                   # Python scripts for data cleaning and round-based processing
-├── data/
-│   ├── Case01_Daxing/       # Beijing Daxing International Airport
-│   │   ├── 20240120_Round01/ # Organized by Date and Patrol Round
-│   │   │   ├── environment.csv  # Multi-parameter sensor data (10s interval)
-│   │   │   └── trajectory.csv   # Robot pose (x, y, theta)
-│   │   └── ...
-│   └── Case02_Dahe/         # Zhengzhou Dahecun Museum
-│       ├── 20240315_Round01/
-│       └── ...
-├── .gitignore               # Configured to exclude raw images/videos
-└── README.md
+├── data_dahe/
+│   ├── light_csv/
+│   │   ├── environmental field/       # Scripts for field generation
+│   │   ├── 01 原始数据分测点整理.py
+│   │   ├── ... (other processing scripts)
+│   │   └── test_dahe_light_calibrated.csv
+│   ├── nolight_csv/
+│   ├── photos/                        # [IGNORED BY GIT]
+│   └── raw_csv/
+├── data_daxing/
+│   ├── Environmental Field/
+│   ├── photos/                        # Case: Daxing Airport Photos
+│   │   ├── 20241215/                  # Start of the date sequence
+│   │   │   ├── RGB/
+│   │   │   └── Thermal/
+│   │   ├── ...                        # [Dates 20241216 - 20241225 omitted]
+│   │   ├── 20241226/                  # End of the date sequence
+│   │   └── 热图/                       # Thermal Analysis Folders
+│   │       ├── 20241217/
+│   │       └── ... (similar RGB/Thermal structure)
+│   └── raw_csv/
+│       ├── 02 原始数据自动分圈.py
+│       └── test_daxing.csv
+└── data_daxing_adaptive/
+    ├── data_processed_adaptive/
+    │   ├── 0103-10.csv                # Sample processed files
+    │   └── ... (0103 to 0105 datasets)
+    └── raw_csv/                       # Adaptive Sensing Case (Mixed Stationary/Mobile)
+        ├── 20250102_1_固定/
+        │   ├── RGB/
+        │   └── Thermal/
+        ├── 20250102_2_移动/
+        ├── ...                        # [40+ sequential patrol folders omitted]
+        └── 20250105_9_移动/            # Final patrol round
 ```
 
 ---
