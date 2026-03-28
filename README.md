@@ -79,7 +79,7 @@ IBEM_data/
 ├── .gitignore
 ├── data_dahe/                         # Case: Dahecun Museum (Zhengzhou)
 │   ├── light_csv/                     # Datasets including dedicated illuminance points
-│   │   ├── environmental field/       # Scripts for spatial field generation
+│   │   ├── Environmental Field/       # Scripts for spatial field generation
 │   │   │   ├── field_gen_official.py
 │   │   │   ├── field_gen_test.py
 │   │   ├── 01_raw_data_sorting.py
