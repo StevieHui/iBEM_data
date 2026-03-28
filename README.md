@@ -5,7 +5,7 @@
 **IBEM_data** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
 
 <p align="center">
-  <img src="assets/system.png" width="80%" alt="System Overview" />
+  <img src="assets/system.png" width="90%" alt="System Overview" />
   <br />
   <em>Figure 1: Intelligent robotic system for indoor environment monitoring.</em>
 </p>
@@ -18,16 +18,16 @@ By utilizing mobile robotics, this dataset provides a unique "walk-through" pers
 
 The dataset covers over **50,000 $m^2$** across various climate zones and functional public spaces. The following table provides details on the core cases currently included or scheduled for release:
 
-| Case Study (Task Area) | Building Function | Spatial Area | Duration | Climate Zone |
-| :--- | :--- | :--- | :--- | :--- |
-| **Daxing Airport (Terminal 1F)** | Transportation | 2,200 $m^2$ | 21 Days | Cold |
-| **Daxing Airport (Terminal 4F)** | Transportation | 27,000 $m^2$ | 21 Days | Cold |
-| **Dahecun Museum** | Exhibition | 11,000 $m^2$ | 16 Days | Cold |
-| **CABR Innovation Center** | Office | 1,600 $m^2$ | 11 Days | Cold |
-| **Digital City Hall (Haikou)** | Exhibition/Office | 1,600 $m^2$ | 5 Days | Hot-Summer/Warm-Winter |
-| **Student Service Center** | Study/Self-study | 1,500 $m^2$ | 5 Days | Cold |
-| **THU Arch. Exhibition Hall** | Mixed-use | 500 $m^2$ | 5 Days | Cold |
-| **THU Multi-function Hall** | Education | 130 $m^2$ | 2 Days | Cold |
+| Case Study (Task Area) | Building Function | Location | Spatial Area | Duration | Climate Zone |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Daxing Airport (Terminal 1F)** | Transportation | Beijing, China | 2,200 $m^2$ | 21 Days | Cold |
+| **Daxing Airport (Terminal 4F)** | Transportation | Beijing, China | 27,000 $m^2$ | 21 Days | Cold |
+| **Dahecun Museum** | Exhibition | Zhengzhou, China | 11,000 $m^2$ | 16 Days | Cold |
+| **CABR Innovation Center** | Office | Beijing, China | 1,600 $m^2$ | 11 Days | Cold |
+| **Digital City Hall** | Exhibition/Office | Haikou, China | 1,600 $m^2$ | 5 Days | Hot-Summer/Warm-Winter |
+| **Student Service Center** | Study/Self-study | Beijing, China | 1,500 $m^2$ | 5 Days | Cold |
+| **THU Arch. Exhibition Hall** | Mixed-use | Beijing, China | 500 $m^2$ | 5 Days | Cold |
+| **THU Multi-function Hall** | Education | Beijing, China | 130 $m^2$ | 2 Days | Cold |
 
 ---
 
@@ -43,7 +43,7 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 * **Multimodal Forecasting:** Predicting future environmental states and field evolutions using temporal-spatial models like **LSTM, GNN, or Graph-based Gaussian Processes**.
 
 <p align="center">
-  <img src="assets/reconstruction.gif" width="90%" alt="Field Reconstruction" />
+  <img src="assets/reconstruction.gif" width="100%" alt="Field Reconstruction" />
   <br />
   <em>Figure 2: Dynamic Environmental Field Reconstruction of Dahecun Museum.</em>
 </p>
@@ -55,7 +55,7 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 * **Building Environment Question Answering (QA):** Leveraging **Vision-Language Models (VLMs)** and **LLMs** to interact with the dataset, enabling natural language queries regarding building operational status.
 
 <p align="center">
-  <img src="assets/comfort.png" width="70%" alt="Thermal Comfort" />
+  <img src="assets/comfort.png" width="80%" alt="Thermal Comfort" />
   <br />
   <em>Figure 3: Visual-based human perception and thermal comfort assessment.</em>
 </p>
@@ -65,6 +65,12 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 * **Demand-Oriented HVAC Optimization\*:** Driving energy-efficient "on-demand" HVAC control strategies by mapping environmental loads and real-time occupant behavior.
 * **Occupant-Environment Interaction:** Mining physical correlation models between group behaviors and environmental parameter decay to support occupant-centric building design.
 * **Environmental Event Response:** Utilizing mobile sensing for rapid localization and decision-making during sudden events like pollutant leaks or equipment failures.
+
+<p align="center">
+  <img src="assets/control.png" width="90%" alt="Thermal Comfort" />
+  <br />
+  <em>Figure 4: Multi‑Source Sensing Framework for Intelligent HVAC Control.</em>
+</p>
 
 ---
 
