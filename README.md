@@ -1,7 +1,5 @@
 # IBEM_data: A Multi-modal Indoor Environment Dataset for Public Buildings
 
-This is the final, comprehensive English version of your `README.md`. I have integrated the detailed case study table into the **Dataset Overview** and ensured the **Potential Applications** section feels like an open-ended "sandbox" for users.
-
 ---
 
 **IBEM_data** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
@@ -58,40 +56,40 @@ The repository follows a strict spatial-temporal organization. Data is partition
 
 ```text
 IBEM_data/
-├── data_dahe/
-│   ├── light_csv/
-│   │   ├── environmental field/       # Scripts for field generation
-│   │   ├── 01 原始数据分测点整理.py
-│   │   ├── ... (other processing scripts)
+├── README.md
+├── .gitignore
+├── data_dahe/                         # Case: Dahecun Museum (Zhengzhou)
+│   ├── light_csv/                     # Datasets including dedicated illuminance points
+│   │   ├── environmental field/       # Scripts for spatial field generation
+│   │   │   ├── field_gen_official.py
+│   │   │   ├── field_gen_test.py
+│   │   ├── 01_raw_data_sorting.py
+│   │   ├── 02_auto_lap_segment.py
 │   │   └── test_dahe_light_calibrated.csv
-│   ├── nolight_csv/
-│   ├── photos/                        # [IGNORED BY GIT]
+│   ├── nolight_csv/                   # Datasets excluding dedicated illuminance points
+│   │   ├── 01_raw_data_sorting.py
+│   │   ├── 02_auto_lap_segment.py
+│   │   └── test_dahe_nolight_calibrated.csv
+│   ├── photos/                        # [IGNORED] Raw image storage
+│   └── raw_csv/                       # Original source files for Dahe Case
+│       ├── point_label.csv            # Coordinates of sensing points
+│       └── test_dahe_formal.csv       # Main integrated raw dataset
+├── data_daxing/                       # Case: Daxing International Airport (Beijing)
+│   ├── Environmental Field/           # Field reconstruction scripts
+│   ├── photos/                        # [IGNORED]
 │   └── raw_csv/
-├── data_daxing/
-│   ├── Environmental Field/
-│   ├── photos/                        # Case: Daxing Airport Photos
-│   │   ├── 20241215/                  # Start of the date sequence
-│   │   │   ├── RGB/
-│   │   │   └── Thermal/
-│   │   ├── ...                        # [Dates 20241216 - 20241225 omitted]
-│   │   ├── 20241226/                  # End of the date sequence
-│   │   └── 热图/                       # Thermal Analysis Folders
-│   │       ├── 20241217/
-│   │       └── ... (similar RGB/Thermal structure)
-│   └── raw_csv/
-│       ├── 02 原始数据自动分圈.py
-│       └── test_daxing.csv
-└── data_daxing_adaptive/
-    ├── data_processed_adaptive/
-    │   ├── 0103-10.csv                # Sample processed files
-    │   └── ... (0103 to 0105 datasets)
-    └── raw_csv/                       # Adaptive Sensing Case (Mixed Stationary/Mobile)
-        ├── 20250102_1_固定/
+└── data_daxing_adaptive/              # Case: Adaptive Sensing (Stationary + Mobile)
+    ├── data_processed_adaptive/       # Cleaned time-series by session
+    │   ├── 0103-10.csv
+    │   ├── 0103-12.csv
+    │   └── ... [Files up to 0105-l9.csv omitted]
+    └── raw_csv/                       # Raw adaptive patrol rounds
+        ├── 20250102_1_Stationary/     # Stationary sensing session
         │   ├── RGB/
         │   └── Thermal/
-        ├── 20250102_2_移动/
-        ├── ...                        # [40+ sequential patrol folders omitted]
-        └── 20250105_9_移动/            # Final patrol round
+        ├── 20250102_2_Mobile/         # Mobile patrol session
+        ├── ... [40+ sequential patrol folders omitted]
+        └── 20250105_9_Mobile/         # Final session
 ```
 
 ---
@@ -105,8 +103,8 @@ To comply with **Privacy Protection Regulations** and **Property Management Agre
 
 ### How to Request Access
 
-1. **Contact:** Chen Yihui (陈熠辉), School of Architecture, Tsinghua University.
-2. **Email:** [Your Email Address]
+1. **Contact:** Yuan Mufeng, School of Architecture, Tsinghua University.
+2. **Email:** [yuanmf21@mails.tsinghua.edu.cn]
 3. **Note:** Please provide your affiliation and a brief description of your research intent. Redistribution of raw imagery is strictly prohibited.
 
 ---
