@@ -27,26 +27,26 @@ The dataset covers over **50,000 $m^2$** across various climate zones and functi
 
 ## 💡 Potential Applications
 
-This dataset is designed as an open-ended sandbox. The following examples demonstrate how the raw data can be utilized, but we encourage users to explore their own methodologies:
+This dataset serves as a multi-modal sandbox integrating building physics with mobile robotics to support the following high-level intelligent tasks:
 
-### 1. Spatial-Temporal Field Reconstruction
+### 1. Advanced Environmental Perception
 
-Using the synchronized `trajectory.csv` and `environment.csv`, users can explore various spatial interpolation algorithms to visualize continuous environmental fields.
+* **Indoor Environmental Field Reconstruction\*:** Utilizing sparse mobile sensing data to reconstruct continuous spatial fields (e.g., $CO_2$, PM2.5, Temp) via **IDW, Kriging, Gaussian Processes (GP), or Convolutional Networks (CN)**.
+* **IEQ & Occupant Comfort Evaluation\*:** Fusing environmental fields with visual/thermal imagery for **Target Detection and Classification** to assess Predicted Mean Vote (PMV/PPD).
+* **Environmental Diagnosis & Expert Systems\*:** Identifying building performance issues (e.g., envelope insulation leaks or HVAC terminal malfunctions) through **Semantic Mapping** and thermal imaging analysis.
+* **Multimodal Forecasting:** Predicting future environmental states and field evolutions using temporal-spatial models like **LSTM, GNN, or Graph-based Gaussian Processes**.
 
-* **Algorithm Agnostic:** While we have utilized **RBF (Radial Basis Function)** interpolation, the density of the data allows for Kriging, Gaussian Process Regression, or Neural Field approaches.
-* **Example:** Visualizing $CO_2$ hotspots or temperature gradients across a 27,000 $m^2$ airport terminal.
-* **Visualization:** (See `assets/field_reconstruction_sample.png` for a sample reconstruction map).
+### 2. Autonomous Sensing & Decision Making
 
-### 2. Occupant Comfort & Health Assessment
+* **Active Sampling & Path Planning\*:** Developing algorithms that allow robots to autonomously locate areas with high environmental gradients for prioritized sampling using **A*, Dijkstra, or Semantic Navigation**.
+* **Mobile-Stationary Collaborative Sensing\*:** Coordinating fixed sensors (high temporal resolution) and mobile robots (high spatial coverage) to capture comprehensive environmental features based on physical baseline tasks.
+* **Building Environment Question Answering (QA):** Leveraging **Vision-Language Models (VLMs)** and **LLMs** to interact with the dataset, enabling natural language queries regarding building operational status.
 
-Link environmental variables with visual-based occupancy metadata to conduct advanced IEQ (Indoor Environmental Quality) evaluations:
+### 3. Smart Building Operation & Interaction
 
-* Map spatial-temporal **PMV/PPD** (Predicted Mean Vote) distributions.
-* Analyze the correlation between occupant density and air quality decay in real-time.
-
-### 3. Robotic Perception & Path Planning
-
-The high-precision SLAM trajectories and multi-sensor fusion offer a playground for researchers in **Environment-aware Robotics**, such as optimizing autonomous patrol paths based on environmental fluctuations.
+* **Demand-Oriented HVAC Optimization\*:** Driving energy-efficient "on-demand" HVAC control strategies by mapping environmental loads and real-time occupant behavior.
+* **Occupant-Environment Interaction:** Mining physical correlation models between group behaviors and environmental parameter decay to support occupant-centric building design.
+* **Environmental Event Response:** Utilizing mobile sensing for rapid localization and decision-making during sudden events like pollutant leaks or equipment failures.
 
 ---
 
@@ -56,6 +56,7 @@ The repository follows a strict spatial-temporal organization. Data is partition
 
 ```text
 IBEM_data/
+├── assets
 ├── README.md
 ├── .gitignore
 ├── data_dahe/                         # Case: Dahecun Museum (Zhengzhou)
