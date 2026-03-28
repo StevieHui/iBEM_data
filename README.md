@@ -5,9 +5,9 @@
 **IBEM_data** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
 
 <p align="center">
-  <img src="assets/ibembot_system.png" width="80%" alt="IBEMbot Robotic System" />
+  <img src="assets/system.png" width="80%" alt="System Overview" />
   <br />
-  <em>Figure 1: Overview of the intelligent robotic system for indoor environment monitoring (IBEMbot).</em>
+  <em>Figure 1: Intelligent robotic system for indoor environment monitoring.</em>
 </p>
 
 By utilizing mobile robotics, this dataset provides a unique "walk-through" perspective on indoor environments, bridging the gap between building science, mobile robotics, and occupant-centric research.
@@ -43,9 +43,9 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 * **Multimodal Forecasting:** Predicting future environmental states and field evolutions using temporal-spatial models like **LSTM, GNN, or Graph-based Gaussian Processes**.
 
 <p align="center">
-  <img src="assets/dahe_reconstruction.png" width="90%" alt="Dahe Field Reconstruction" />
+  <img src="assets/reconstruction.gif" width="90%" alt="Field Reconstruction" />
   <br />
-  <em>Figure 2: Multi-parameter environmental field reconstruction (Temperature, CO2, Humidity) based on mobile sensing: A Case Study of Dahecun Museum.</em>
+  <em>Figure 2: Dynamic Environmental Field Reconstruction of Dahecun Museum.</em>
 </p>
 
 ### 2. Autonomous Sensing & Decision Making
@@ -55,9 +55,9 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 * **Building Environment Question Answering (QA):** Leveraging **Vision-Language Models (VLMs)** and **LLMs** to interact with the dataset, enabling natural language queries regarding building operational status.
 
 <p align="center">
-  <img src="assets/thermal_comfort.png" width="70%" alt="Thermal Comfort Assessment" />
+  <img src="assets/comfort.png" width="70%" alt="Thermal Comfort" />
   <br />
-  <em>Figure 3: Fusion of visual imagery and environmental fields for occupant detection, behavior analysis, and spatial-temporal thermal comfort (PMV/PPD) assessment.</em>
+  <em>Figure 3: Visual-based human perception and thermal comfort assessment.</em>
 </p>
 
 ### 3. Smart Building Operation & Interaction
