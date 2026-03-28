@@ -69,7 +69,7 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 <p align="center">
   <img src="assets/control.png" width="90%" alt="Thermal Comfort" />
   <br />
-  <em>Figure 4: Multi‑Source Sensing Framework for Intelligent HVAC Control.</em>
+  <em>Figure 4: Multi‑Source Sensing Framework for Intelligent Precise IEQ Evaluation and HVAC Control.</em>
 </p>
 
 ---
