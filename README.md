@@ -80,41 +80,52 @@ The repository follows a strict spatial-temporal organization. Data is partition
 
 ```text
 IBEM_data/
-├── assets
-├── README.md
-├── .gitignore
-├── data_dahe/                         # Case: Dahecun Museum (Zhengzhou)
-│   ├── light_csv/                     # Datasets including dedicated illuminance points
-│   │   ├── Environmental Field/       # Scripts for spatial field generation
-│   │   │   ├── field_gen_official.py
-│   │   │   ├── field_gen_test.py
-│   │   ├── 01_raw_data_sorting.py
-│   │   ├── 02_auto_lap_segment.py
-│   │   └── test_dahe_light_calibrated.csv
-│   ├── nolight_csv/                   # Datasets excluding dedicated illuminance points
-│   │   ├── 01_raw_data_sorting.py
-│   │   ├── 02_auto_lap_segment.py
-│   │   └── test_dahe_nolight_calibrated.csv
-│   ├── photos/                        # [IGNORED] Raw image storage
-│   └── raw_csv/                       # Original source files for Dahe Case
-│       ├── point_label.csv            # Coordinates of sensing points
-│       └── test_dahe_formal.csv       # Main integrated raw dataset
-├── data_daxing/                       # Case: Daxing International Airport (Beijing)
-│   ├── Environmental Field/           # Field reconstruction scripts
-│   ├── photos/                        # [IGNORED]
-│   └── raw_csv/
-└── data_daxing_adaptive/              # Case: Adaptive Sensing (Stationary + Mobile)
-    ├── data_processed_adaptive/       # Cleaned time-series by session
-    │   ├── 0103-10.csv
-    │   ├── 0103-12.csv
-    │   └── ... [Files up to 0105-l9.csv omitted]
-    └── raw_csv/                       # Raw adaptive patrol rounds
-        ├── 20250102_1_Stationary/     # Stationary sensing session
-        │   ├── RGB/
-        │   └── Thermal/
-        ├── 20250102_2_Mobile/         # Mobile patrol session
-        ├── ... [40+ sequential patrol folders omitted]
-        └── 20250105_9_Mobile/         # Final session
+├── 📂 assets/                         # Documentation assets (Protocols, diagrams, icons)
+├── 📄 README.md                       # Main project documentation & workflow guide
+├── 📄 .gitignore                      # Version control exclusion rules
+│
+├── 📂 data_dahe/ ──────────────────── # CASE 1: DAHECUN MUSEUM (ZHENGZHOU)
+│   ├── 📂 light_csv/                  # Datasets with dedicated illuminance (Lux) points
+│   │   ├── 📂 Environmental Field/    # 🛠️ Spatial field generation module
+│   │   │   ├── 📜 field_gen_official.py
+│   │   │   └── 📜 field_gen_test.py
+│   │   ├── 📜 01_raw_data_sorting.py  # Data pre-processing & cleaning
+│   │   ├── 📜 02_auto_lap_segment.py  # Automated round segmentation
+│   │   └── 📊 test_dahe_light_calibrated.csv
+│   ├── 📂 nolight_csv/                # Datasets excluding dedicated illuminance points
+│   │   ├── 📜 01_raw_data_sorting.py
+│   │   ├── 📜 02_auto_lap_segment.py
+│   │   └── 📊 test_dahe_nolight_calibrated.csv
+│   ├── 📂 photos/                     # [IGNORED] Raw imagery storage
+│   └── 📂 raw_csv/                    # Original source files for Dahe Case
+│       ├── 📊 point_label.csv         # Global coordinates of sensing points (Ground Truth)
+│       └── 📊 test_dahe_formal.csv    # Main integrated raw dataset
+│
+├── 📂 data_daxing/ ────────────────── # CASE 2: DAXING AIRPORT (BEIJING)
+│   ├── 📂 Environmental Field_LAPS/   # 🌐 GLOBAL FIELD HUB
+│   │   └── 📦 (e.g., 1212_1.npz, ...) # Interpolated LAPS fields organized by rounds
+│   ├── 📂 Environmental Field_REGIONS/ # 🎯 ZONAL PROCESSING & FINAL ASSETS
+│   │   ├── 📂 extracted_regions/      # Segmented regional field data (P1–P10)
+│   │   ├── 📂 photos/                 # Multi-modal visual dataset
+│   │   │   ├── 🖼️ RGB/                # 1,130 segmented RGB images (Complete set)
+│   │   │   └── 🌡️ Thermal/            # 1,010 thermal images [12/18 Sensor Fault: -120]
+│   │   ├── 📜 rename_photos.py        # Workflow: Batch nomenclature standardization
+│   │   ├── 📜 Shapely.py              # Logic: Point-in-polygon spatial filtering
+│   │   └── 📜 split_env_fields.py     # Logic: Cropping global fields into P1-P10 zones
+│   ├── 📂 raw_csv/                    # Primary sensor time-series (CSV)
+│   └── 📂 raw_photos/                 # [IGNORED] Full-resolution original backups
+│
+└── 📂 data_daxing_adaptive/ ───────── # CASE 3: ADAPTIVE SENSING (HYBRID PATROL)
+    ├── 📂 data_processed_adaptive/    # Cleaned time-series by flight/patrol session
+    │   ├── 📊 0103-10.csv             # Data: Session 10 on Jan 3rd
+    │   ├── 📊 0103-12.csv             # Data: Session 12 on Jan 3rd
+    │   └── ...                        [Sessions 0103 to 0105 omitted]
+    └── 📂 raw_csv/                    # Raw adaptive patrol rounds
+        ├── 📂 20250102_1_Stationary/  # Baseline: Stationary sensing session
+        │   ├── 🖼️ RGB/
+        │   └── 🌡️ Thermal/
+        ├── 📂 20250102_2_Mobile/      # Variable: Mobile patrol session
+        └── ...                        [40+ sequential patrol folders archived]
 ```
 
 ---
