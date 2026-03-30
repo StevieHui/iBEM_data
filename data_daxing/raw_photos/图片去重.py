@@ -3,15 +3,13 @@ import shutil
 from datetime import datetime
 from collections import Counter
 
-# ================= 配置区 =================
-# 你只需要修改这一行日期，脚本会自动寻找对应的 RGB 并创建 RGBt
+
 target_date = "20241225" 
 base_path = r'D:\陈熠辉备份\大三上\寒假科研\ibem_data\data_daxing\photos'
 TIME_THRESHOLD = 300  # 时间阈值
-# ==========================================
+
 
 def process_single_folder():
-    # 构建路径
     date_dir = os.path.join(base_path, target_date)
     src_dir = os.path.join(date_dir, 'RGB')  
     dst_dir = os.path.join(date_dir, 'RGB_t')
