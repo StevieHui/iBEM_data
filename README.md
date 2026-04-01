@@ -28,6 +28,7 @@ The dataset covers over **50,000 $m^2$** across various climate zones and functi
 | **Student Service Center** | Study/Self-study | Beijing, China | 1,500 $m^2$ | 5 Days | Cold |
 | **THU Arch. Exhibition Hall** | Mixed-use | Beijing, China | 500 $m^2$ | 5 Days | Cold |
 | **THU Multi-function Hall** | Education | Beijing, China | 130 $m^2$ | 2 Days | Cold |
+| **Alibaba Group A8 Building** | Office | Hangzhou, China | 320 $m^2$ | 2 Days | Hot-Summer/Cold-Winter |
 
 ---
 
