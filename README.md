@@ -1,8 +1,8 @@
-# IBEM_data: A Multi-modal Indoor Environment Dataset for Public Buildings
+# MobilEnv: A Multi-modal Indoor Environment Dataset for Public Buildings
 
 ---
 
-**IBEM_data** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
+**MobilEnv** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
 
 <p align="center">
   <img src="assets/system.png" width="90%" alt="System Overview" />
@@ -79,7 +79,7 @@ This dataset serves as a multi-modal sandbox integrating building physics with m
 The repository follows a strict spatial-temporal organization. Data is partitioned into "Rounds" to represent specific patrol cycles.
 
 ```text
-IBEM_data/
+MobilEnv/
 ├── 📂 assets/                         # Documentation assets (Protocols, diagrams, icons)
 ├── 📄 README.md                       # Main project documentation & workflow guide
 ├── 📄 .gitignore                      # Version control exclusion rules
@@ -147,11 +147,11 @@ To comply with **Privacy Protection Regulations** and **Property Management Agre
 
 ## 📖 Citation
 
-If you use **IBEM_data** in your research, please cite our work:
+If you use **MobilEnv** in your research, please cite our work:
 
 ```bibtex
-@misc{ibemdata2026,
-  title={IBEM_data: A Multi-modal Mobile-Sensing Dataset for Public Building Environments},
+@misc{MobilEnv2026,
+  title={MobilEnv: A Multi-modal Mobile-Sensing Dataset for Public Building Environments},
   author={Yuan, Mufeng and Chen, Yihui},
   institution={Tsinghua University},
   year={2026},
