@@ -2,7 +2,7 @@
 
 ---
 
-**MobilEnv** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **School of Architecture, Tsinghua University**.
+**MobilEnv** is a high-resolution, multi-modal dataset for indoor environmental research, collected via the **IBEMbot** (Intelligent Building Environment Mobile-sensing System) developed by the **Key Laboratory of Eco-Planning & Green Building, School of Architecture, Tsinghua University**.
 
 <p align="center">
   <img src="assets/system.png" width="90%" alt="System Overview" />
